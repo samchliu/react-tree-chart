@@ -1,0 +1,58 @@
+.pane {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #fafbfc;
+  cursor: grab;
+  touch-action: none;
+}
+
+.panePanning {
+  cursor: grabbing;
+}
+
+.transformLayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+.transformLayer > * {
+  pointer-events: auto;
+}
+
+.edgesSvg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.edgePath {
+  stroke: #d0d7de;
+  stroke-width: 1px;
+  fill: none;
+}
+
+.nodeLayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.overlay > * {
+  pointer-events: auto;
+}

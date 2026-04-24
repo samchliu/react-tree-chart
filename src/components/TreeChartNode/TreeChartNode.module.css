@@ -1,0 +1,69 @@
+/* Card shell + drop-target states (default node and custom renderNode). */
+.node {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  padding: 12px;
+}
+
+.contentOverflowAuto {
+  overflow: auto;
+}
+
+.dropTargetChild {
+  outline: 2px solid #2563eb;
+}
+
+.dropTargetBefore {
+  background: #2563eb;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  margin: 8px;
+  width: 2px;
+}
+
+.dropTargetAfter {
+  background: #2563eb;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  margin: 8px;
+  width: 2px;
+}
+
+.forbidden {
+  outline: 2px solid #dc2626;
+}
+
+/* Optional highlight while this node is the drag source (library DnD). */
+.isDragSource {
+  outline: 2px solid #9333ea;
+  outline-offset: 1px;
+}
+
+.collapseButton {
+  position: absolute;
+  box-sizing: border-box;
+  margin-top: 10px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 1;
+  background: white;
+  border: 1px solid #d0d7de;
+  border-radius: 999px;
+  cursor: pointer;
+}

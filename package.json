@@ -1,0 +1,73 @@
+{
+  "name": "react-tree-chart",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Smart auto-layout tree chart component library for React 17.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsup --dts-only",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "changeset": "changeset",
+    "version-packages": "changeset version"
+  },
+  "peerDependencies": {
+    "react": ">=17 <18",
+    "react-dom": ">=17 <18"
+  },
+  "dependencies": {
+    "@atlaskit/pragmatic-drag-and-drop": "^1.7.7",
+    "clsx": "^2.1.1",
+    "d3-hierarchy": "^3.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.14",
+    "@changesets/cli": "^2.29.4",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/d3-hierarchy": "^3.1.7",
+    "@types/node": "^20.17.30",
+    "@types/react": "^17.0.83",
+    "@types/react-dom": "^17.0.26",
+    "@typescript-eslint/eslint-plugin": "^8.30.1",
+    "@typescript-eslint/parser": "^8.30.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.1.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.3",
+    "storybook": "^8.6.14",
+    "tsup": "^8.4.0",
+    "typescript": "~4.9.5",
+    "vite": "^5.4.18",
+    "vitest": "^3.1.1"
+  },
+  "packageManager": "yarn@1.22.21"
+}

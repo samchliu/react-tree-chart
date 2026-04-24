@@ -1,0 +1,13 @@
+.nodeWrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.nodeWrapDynamic {
+  overflow: visible;
+  /* Avoid flex + `min-height: 0` on the child collapsing when height is `auto`. */
+  display: block;
+}
