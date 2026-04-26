@@ -2,6 +2,8 @@
 
 React 17 + TypeScript component library for an infinite-canvas tree chart with smart drag-and-drop and auto-layout.
 
+- Storybook (GitHub Pages): <https://samchliu.github.io/react-tree-chart/>
+
 ## Tech Stack
 
 - Rendering: custom pan/zoom viewport + SVG edges (no React Flow)
@@ -56,14 +58,27 @@ yarn storybook
 
 ## Exported APIs
 
-- `TreeChart`
-- `TreeChartNode`
-- `computeLayout`
-- `detectDropIntent`
-- `bindNodeDragAndDrop`
-- `moveNode`
-- `useTreeChartController`
-- Types: `TreeChartController`, `Viewport`, `FitViewOptions`
+- Components / Hooks
+  - `TreeChart`
+  - `TreeChartNode`
+  - `TreeChartDropZoneOverlay`
+  - `useTreeChartController`
+- Layout / DnD / Tree utilities
+  - `computeLayout`
+  - `resolveNodeWidth`
+  - `detectDropIntent`
+  - `bindNodeDragAndDrop`
+  - `moveNode`
+  - `canMoveNode`
+  - `indexTreeById`
+- Types
+  - `TreeChartNodeProps`
+  - `LayoutOptions`, `LayoutResult`, `PositionedNode`
+  - `BindNodeDragAndDropOptions`
+  - `FitViewOptions`, `TreeChartController`, `Viewport`
+  - `DropIntent`, `DropIntentMode`
+  - `TreeChartProps`, `TreeChartRenderNodeProps`
+  - `TreeNodeData`, `TreeNodeModel`
 
 ## Acceptance Mapping (from PRD)
 
@@ -71,4 +86,3 @@ yarn storybook
 - Child/sibling/forbidden intent: `detectDropIntent`.
 - Illegal path block (parent -> descendant): `canMoveNode`.
 - Auto-format after drop: `moveNode` + `computeLayout` + `fitView`.
-# react-tree-chart
